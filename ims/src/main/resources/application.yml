@@ -1,0 +1,41 @@
+server:
+  port: 9090
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/students
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ssturerao@gmail.com
+    password: qzogdmyotcbisjos
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+app:
+  messages:
+    welcomeMsg: Welcome To Career Infotech..!!
+    greetMsg: Good Morning...!!
+    invalidCredentials: Invalid Credentials
+    accLocked: Your Account Locked
+    userRegSuccs: Please check your email for unlocking your account
+    userRegFail: Failed To Register
+    unlockAccEmailSub: Registration Success | Career Infotech
+    unlockAccEmailBodyFile: UNLOCK-ACC-EMAIL-BODY-TEMPLATE.txt
+    recoverPwdEmailBodyFile: RECOVER-PASSWORD-EMAIL-BODY-TEMPLATE.txt
+    recoverPwdEmailSub: Forgot Password | Career Infotech
